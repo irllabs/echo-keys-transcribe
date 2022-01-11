@@ -11,8 +11,6 @@ import CoreData
 struct ContentView: View {
     
     @StateObject var soundPlayer = SoundPlayer()
-    @StateObject var speechRecognizerTap : SpeechRecognizerTap
-    @StateObject var conductor = RecorderConductor()
     
 //    @Environment(\.managedObjectContext) private var viewContext
 //
@@ -97,12 +95,12 @@ struct ContentView: View {
 //    }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
+//private let itemFormatter: DateFormatter = {
+//    let formatter = DateFormatter()
+//    formatter.dateStyle = .short
+//    formatter.timeStyle = .medium
+//    return formatter
+//}()
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

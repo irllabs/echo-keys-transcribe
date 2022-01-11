@@ -11,7 +11,7 @@ import Speech
 struct RecordView: View {
     
     @StateObject var conductor = RecorderConductor()
-    @StateObject var speechRecognizerTap : SpeechRecognizerTap
+    // @ObservedObject var speechRecognizerTap : SpeechRecognizerTap
     
     // private let speechRecognizer = SpeechRecognizer()
 
@@ -29,7 +29,7 @@ struct RecordView: View {
                 .onTapGesture {self.conductor.data.isPlaying.toggle()
             }
             Spacer()
-            Text(self.speechRecognizerTap.transcription)
+            Text(self.conductor.speechRecognizerTap.transcription)
             
             
         }

@@ -42,20 +42,12 @@ class RecorderConductor: ObservableObject {
     
     // For speech recognition
     // @Published var speechRecognizerTap: SpeechRecognizerTap
-    var speechRecognizerTap: SpeechRecognizerTap
-    
+    @Published var speechRecognizerTap : SpeechRecognizerTap
 
     
-    // For CoreMotion
-    // For sensor data
-    // @ObservedObject var motion: MotionManager
 
-
-        
     var buffer: AVAudioPCMBuffer
 
-    
-    
     @Published var data = RecorderData() {
         didSet {
             if data.isRecording {
